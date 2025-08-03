@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxem Swiss Coin (LSC)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: #f8f8f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      font-size: 3rem;
+      color: #d4af37;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.15rem;
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .utility-box {
+      margin-top: 50px;
+      border: 1px solid #333;
+      background: #1c1c1c;
+      padding: 30px;
+      border-radius: 20px;
+      width: 100%;
+      max-width: 720px;
+      box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+    }
+
+    .utility-box h2 {
+      color: #fff;
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .utility-box ul {
+      padding-left: 20px;
+      line-height: 1.9;
+      font-size: 1.1rem;
+    }
+
+    .add-wallet {
+      margin-top: 40px;
+      font-size: 1rem;
+      background: linear-gradient(to right, #d4af37, #fff6c1);
+      color: #111;
+      padding: 14px 28px;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+    }
+
+    .add-wallet:hover {
+      background: linear-gradient(to right, #fff6c1, #d4af37);
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
+      text-align: center;
+    }
+
+    img.logo {
+      width: 110px;
+      margin-bottom: 30px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    }
+
+    a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="Luxem Swiss Coin Logo" />
+
+  <h1>Luxem Swiss Coin (LSC)</h1>
+  <p>Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.</p>
+
+  <div class="utility-box">
+    <h2>💼 LSC Utility Benefits</h2>
+    <ul>
+      <li>🔥 Early access to limited sneaker & fashion drops</li>
+      <li>💸 Exclusive discounts at <strong>luxemswiss.com</strong></li>
+      <li>🚀 24-hour shipping upgrades for holders</li>
+      <li>🎁 VIP access to giveaways and airdrops</li>
+      <li>🗳 Vote on future product drops and partnerships</li>
+    </ul>
+  </div>
+
+  <button class="add-wallet" onclick="addToken()">+ Add LSC to MetaMask</button>
+
+  <footer>
+    <p>&copy; 2025 Luxem Swiss Coin — All Rights Reserved</p>
+    <p><a href="https://polygonscan.com/token/0xD48bF95b1d7B5035980C065A78c7D83aaF476367" target="_blank">View LSC on PolygonScan</a></p>
+  </footer>
+
+  <script>
+    async function addToken() {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0xD48bF95b1d7B5035980C065A78c7D83aaF476367',
+              symbol: 'LSC',
+              decimals: 18,
+              image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410',
+            },
+          },
+        });
+
+        if (wasAdded) {
+          alert('✅ LSC added to your MetaMask wallet!');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('⚠️ MetaMask not detected or action declined.');
+      }
+    }
+  </script>
+
+</body>
+</html>
