@@ -3,74 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title data-i18n="title">Luxem Swiss Coin (LSC)</title>
-  <meta name="description" content="Luxem Swiss Coin (LSC) – The official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
+  <title data-i18n="page_title">Luxem Swiss Coin (LSC)</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <select class="language-switcher" onchange="switchLanguage(this.value)">
-    <option value="en">🇬🇧 English</option>
-    <option value="fr">🇫🇷 French</option>
-    <option value="pl">🇵🇱 Polish</option>
-    <option value="sh">🇿🇼 Shona</option>
-    <option value="yo">🇳🇬 Yoruba</option>
-    <option value="tr">🇹🇷 Turkish</option>
-    <option value="es">🇪🇸 Spanish</option>
-    <option value="hi">🇮🇳 Hindi</option>
-    <option value="zh">🇨🇳 Chinese</option>
-    <option value="ru">🇷🇺 Russian</option>
-  </select>
-
-  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="LSC Logo" />
-  <h1 data-i18n="heading">Luxem Swiss Coin (LSC)</h1>
-  <p data-i18n="heroDesc">Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.</p>
-  <div class="countdown" id="countdown" data-i18n="launchCountdown">Loading countdown...</div>
-
-  <div class="benefits">
-    <h2 data-i18n="utilityTitle">LSC Utility Benefits</h2>
-    <ul>
-      <li data-i18n="utility1">Early access to limited sneaker & fashion drops</li>
-      <li data-i18n="utility2">Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
-      <li data-i18n="utility3">24-hour shipping upgrades for holders</li>
-      <li data-i18n="utility4">VIP access to giveaways and airdrops</li>
-      <li data-i18n="utility5">Global usage — fashion meets Web3</li>
-      <li data-i18n="utility6">Use for future services and token rewards</li>
-      <li data-i18n="utility7">Community access via <a href="https://discord.gg/hhW5vFB7" target="_blank">Discord</a></li>
-    </ul>
+  <div class="language-switcher">
+    <select onchange="switchLanguage(this.value)">
+      <option value="en">🇬🇧 English</option>
+      <option value="pl">🇵🇱 Polish</option>
+      <option value="fr">🇫🇷 French</option>
+    </select>
   </div>
 
-  <div class="tokenomics">
-    <h2 class="section-title" data-i18n="tokenomicsTitle">Tokenomics</h2>
-    <ul>
-      <li data-i18n="supply"><strong>Total Supply:</strong> 1,000,000 LSC</li>
-      <li data-i18n="publicSale"><strong>Public Sale:</strong> 40%</li>
-      <li data-i18n="team"><strong>Team & Development:</strong> 20%</li>
-      <li data-i18n="marketing"><strong>Marketing & Partnerships:</strong> 20%</li>
-      <li data-i18n="community"><strong>Community Rewards / Airdrops:</strong> 10%</li>
-      <li data-i18n="reserve"><strong>Reserve / Liquidity:</strong> 10%</li>
-    </ul>
-  </div>
+  <header>
+    <h1 data-i18n="hero_title">Luxem Swiss Coin (LSC)</h1>
+    <p data-i18n="hero_description">Not a meme coin. No rug pull. Pure luxury utility...</p>
+  </header>
 
-  <div class="roadmap">
-    <h2 class="section-title" data-i18n="roadmapTitle">Roadmap</h2>
-    <ol>
-      <li data-i18n="roadmap1">Q3 2025: Token Launch + Discord Setup</li>
-      <li data-i18n="roadmap2">Q4 2025: Marketing, Airdrops, Premium Partnerships</li>
-      <li data-i18n="roadmap3">Q1 2026: App Launch + Global Drops</li>
-      <li data-i18n="roadmap4">Q2 2026: LSC Integrations with Luxem Swiss checkout</li>
-    </ol>
-  </div>
+  <button data-i18n="countdown">Loading countdown...</button>
 
-  <div class="cta">
-    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank" data-i18n="premiumBtn">Buy Premium Access</a>
-    <a href="https://polygonscan.com/token/0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9" target="_blank" data-i18n="polygonBtn">View on PolygonScan</a>
-    <a href="#" onclick="addToMetamask()" data-i18n="metamaskBtn">+ Add LSC to MetaMask</a>
-    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download class="whitepaper-btn" data-i18n="whitepaperBtn">📄 Download Whitepaper</a>
-    <span class="verified-badge" data-i18n="verifiedBadge">✅ Verified Project</span>
-    <a href="#" onclick="connectWallet()" data-i18n="connectBtn">🔗 Connect Wallet</a>
-  </div>
-
-  <footer data-i18n="footer">© 2025 Luxem Swiss Coin. All rights reserved.</footer>
+  <script src="script.js"></script>
 </body>
 </html>
+
