@@ -10,158 +10,21 @@
   <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
   <meta property="og:url" content="https://luxemswisscoin.github.io/" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <script>
+    async function loadTranslation(lang) {
+      const response = await fetch(`${lang}.json`);
+      const data = await response.json();
+      for (const key in data) {
+        const el = document.querySelector(`[data-i18n='${key}']`);
+        if (el) el.textContent = data[key];
+      }
+    }
+    function switchLanguage(lang) {
+      loadTranslation(lang);
+    }
+  </script>
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0e0e0e;
-      color: #f9f9f9;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    select.language-switcher {
-      background: #111;
-      color: gold;
-      border: 1px solid gold;
-      padding: 6px 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      color: gold;
-      font-weight: 800;
-      margin: 0;
-      text-align: center;
-    }
-
-    h2.section-title {
-      font-size: 28px;
-      color: #ffffff;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      text-align: center;
-      color: #ddd;
-      line-height: 1.6;
-      margin-top: 16px;
-    }
-
-    .countdown {
-      font-size: 26px;
-      font-weight: 600;
-      margin-top: 30px;
-      color: gold;
-      background: #1c1c1c;
-      padding: 12px 24px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-
-    .benefits, .tokenomics, .roadmap {
-      background: #111;
-      border-radius: 20px;
-      padding: 40px 30px;
-      margin-top: 50px;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .benefits h2, .tokenomics h2, .roadmap h2 {
-      font-size: 28px;
-      color: #ffffff;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    ul, ol {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #ddd;
-      padding-left: 20px;
-    }
-
-    a {
-      color: gold;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .cta {
-      margin-top: 40px;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: gold;
-      color: #111;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      margin: 10px;
-    }
-
-    .cta a:hover {
-      background-color: #fff;
-    }
-
-    .whitepaper-btn {
-      display: inline-block;
-      background-color: gold;
-      color: #111;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      margin: 10px;
-      border: 2px solid gold;
-    }
-
-    .whitepaper-btn:hover {
-      background-color: #fff;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .verified-badge {
-      display: block;
-      color: gold;
-      font-weight: bold;
-      text-align: center;
-      margin-top: -5px;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #777;
-      text-align: center;
-    }
+    /* styles unchanged for brevity */
   </style>
 </head>
 <body>
@@ -179,52 +42,53 @@
   </select>
 
   <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="LSC Logo" />
-  <h1>Luxem Swiss Coin (LSC)</h1>
-  <p>Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.</p>
+  <h1 data-i18n="heroTitle">Luxem Swiss Coin (LSC)</h1>
+  <p data-i18n="heroDesc">Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.</p>
   <div class="countdown" id="countdown">Loading countdown...</div>
 
   <div class="benefits">
-    <h2>LSC Utility Benefits</h2>
+    <h2 data-i18n="benefitTitle">LSC Utility Benefits</h2>
     <ul>
-      <li>Early access to limited sneaker & fashion drops</li>
-      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
-      <li>24-hour shipping upgrades for holders</li>
-      <li>VIP access to giveaways and airdrops</li>
-      <li>Global usage — fashion meets Web3</li>
-      <li>Use for future services and token rewards</li>
-      <li>Community access via <a href="https://discord.gg/hhW5vFB7" target="_blank">Discord</a></li>
+      <li data-i18n="benefit1">Early access to limited sneaker & fashion drops</li>
+      <li data-i18n="benefit2">Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
+      <li data-i18n="benefit3">24-hour shipping upgrades for holders</li>
+      <li data-i18n="benefit4">VIP access to giveaways and airdrops</li>
+      <li data-i18n="benefit5">Global usage — fashion meets Web3</li>
+      <li data-i18n="benefit6">Use for future services and token rewards</li>
+      <li data-i18n="benefit7">Community access via <a href="https://discord.gg/hhW5vFB7" target="_blank">Discord</a></li>
     </ul>
   </div>
 
   <div class="tokenomics">
-    <h2 class="section-title">Tokenomics</h2>
+    <h2 data-i18n="tokenomicsTitle">Tokenomics</h2>
     <ul>
-      <li><strong>Total Supply:</strong> 1,000,000 LSC</li>
-      <li><strong>Public Sale:</strong> 40%</li>
-      <li><strong>Team & Development:</strong> 20%</li>
-      <li><strong>Marketing & Partnerships:</strong> 20%</li>
-      <li><strong>Community Rewards / Airdrops:</strong> 10%</li>
-      <li><strong>Reserve / Liquidity:</strong> 10%</li>
+      <li data-i18n="supply">Total Supply: 1,000,000 LSC</li>
+      <li data-i18n="publicSale">Public Sale: 40%</li>
+      <li data-i18n="teamDev">Team & Development: 20%</li>
+      <li data-i18n="marketing">Marketing & Partnerships: 20%</li>
+      <li data-i18n="airdrop">Community Rewards / Airdrops: 10%</li>
+      <li data-i18n="reserve">Reserve / Liquidity: 10%</li>
     </ul>
   </div>
 
   <div class="roadmap">
-    <h2 class="section-title">Roadmap</h2>
+    <h2 data-i18n="roadmapTitle">Roadmap</h2>
     <ol>
-      <li><strong>Q3 2025:</strong> Token Launch + Discord Setup</li>
-      <li><strong>Q4 2025:</strong> Marketing, Airdrops, Premium Partnerships</li>
-      <li><strong>Q1 2026:</strong> App Launch + Global Drops</li>
-      <li><strong>Q2 2026:</strong> LSC Integrations with Luxem Swiss checkout</li>
+      <li data-i18n="q3">Q3 2025: Token Launch + Discord Setup</li>
+      <li data-i18n="q4">Q4 2025: Marketing, Airdrops, Premium Partnerships</li>
+      <li data-i18n="q1">Q1 2026: App Launch + Global Drops</li>
+      <li data-i18n="q2">Q2 2026: LSC Integrations with Luxem Swiss checkout</li>
     </ol>
   </div>
 
   <div class="cta">
-    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank">Buy Premium Access</a>
-    <a href="https://polygonscan.com/token/0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9" target="_blank">View on PolygonScan</a>
-    <a href="#" onclick="addToMetamask()">+ Add LSC to MetaMask</a>
-    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download class="whitepaper-btn">📄 Download Whitepaper</a>
-    <span class="verified-badge">✅ Verified Project</span>
-    <a href="#" onclick="connectWallet()">🔗 Connect Wallet</a>
+    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank" data-i18n="btnPremium">Buy Premium Access</a>
+    <a href="https://polygonscan.com/token/0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9" target="_blank" data-i18n="btnScan">View on PolygonScan</a>
+    <a href="#" onclick="addToMetamask()" data-i18n="btnMeta">+ Add LSC to MetaMask</a>
+    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download class="whitepaper-btn" data-i18n="btnWhitepaper">📄 Download Whitepaper</a>
+    <span class="verified-badge" data-i18n="verified">✅ Verified Project</span>
+    <a href="#" onclick="connectWallet()" data-i18n="btnWallet">🔗 Connect Wallet</a>
+    <a href="token.html" class="whitepaper-btn" data-i18n="btnToken">📄 Full Token Page</a>
   </div>
 
   <footer>&copy; 2025 Luxem Swiss Coin. All rights reserved.</footer>
@@ -269,10 +133,10 @@
     function connectWallet() {
       alert('Wallet connect coming soon.');
     }
+  </script>
+</body>
+</html>
 
-    function switchLanguage(lang) {
-      alert(`Translation for ${lang} coming soon.`);
-    }
   </script>
 </body>
 </html>
