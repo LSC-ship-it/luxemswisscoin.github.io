@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxem Swiss Coin (LSC)</title>
   <meta name="description" content="Luxem Swiss Coin (LSC) – The official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
+  <meta property="og:title" content="Luxem Swiss Coin (LSC)" />
+  <meta property="og:description" content="Get early access, discounts, and VIP drops using LSC." />
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
+  <meta property="og:url" content="https://luxemswisscoin.github.io/" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -17,10 +21,13 @@
       align-items: center;
       padding: 60px 20px;
     }
+
     img.logo {
       width: 120px;
+      height: auto;
       margin-bottom: 20px;
     }
+
     h1 {
       font-size: 42px;
       color: gold;
@@ -28,6 +35,7 @@
       margin: 0;
       text-align: center;
     }
+
     p {
       font-size: 18px;
       max-width: 700px;
@@ -36,6 +44,7 @@
       line-height: 1.6;
       margin-top: 16px;
     }
+
     .countdown {
       font-size: 26px;
       font-weight: 600;
@@ -46,6 +55,7 @@
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
+
     .benefits {
       background: #111;
       border-radius: 20px;
@@ -55,36 +65,60 @@
       max-width: 800px;
       width: 100%;
     }
+
     .benefits h2 {
       font-size: 28px;
       color: #ffffff;
       margin-bottom: 24px;
       text-align: center;
     }
+
     .benefits ul {
       list-style: none;
       padding: 0;
       font-size: 18px;
       line-height: 2;
     }
+
     .benefits li {
       margin-bottom: 12px;
       position: relative;
       padding-left: 16px;
     }
+
     .benefits li::before {
-      content: '•';
+      content: '\2022';
       position: absolute;
       left: 0;
       color: gold;
     }
+
     a {
       color: gold;
-      font-weight: 600;
       text-decoration: none;
+      font-weight: 600;
     }
+
     a:hover {
       text-decoration: underline;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
+    .cta a {
+      display: inline-block;
+      background-color: gold;
+      color: #111;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .cta a:hover {
+      background-color: #fff;
     }
   </style>
 </head>
@@ -101,12 +135,18 @@
     <h2>LSC Utility Benefits</h2>
     <ul>
       <li>Early access to limited sneaker & fashion drops</li>
-      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">luxemswiss.com</a></li>
+      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
       <li>24-hour shipping upgrades for holders</li>
       <li>VIP access to giveaways and airdrops</li>
       <li>Global usage — fashion meets Web3</li>
       <li>Use for future services and token rewards</li>
     </ul>
+  </div>
+
+  <div class="cta">
+    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank">Buy Premium Access</a>
+    <a href="https://polygonscan.com/token/YOUR_TOKEN_ADDRESS" target="_blank" style="margin-left: 20px">View on PolygonScan</a>
+    <a href="#" onclick="addToMetamask()" style="margin-left: 20px">+ Add LSC to MetaMask</a>
   </div>
 
   <script>
@@ -130,6 +170,25 @@
 
       countdownEl.textContent = `Launch in ${days}d ${hours}h ${minutes}m ${seconds}s`;
     }, 1000);
+
+    async function addToMetamask() {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: 'YOUR_TOKEN_ADDRESS',
+              symbol: 'LSC',
+              decimals: 18,
+              image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410'
+            },
+          },
+        });
+      } catch (error) {
+        console.error('Error adding to MetaMask:', error);
+      }
+    }
   </script>
 </body>
 </html>
