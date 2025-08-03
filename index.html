@@ -11,248 +11,56 @@
   <meta property="og:url" content="https://luxemswisscoin.github.io/" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #0e0e0e;
-      color: #f9f9f9;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 20px;
-    }
-
-    img.logo {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: 42px;
-      color: gold;
-      font-weight: 800;
-      margin: 0;
-      text-align: center;
-    }
-
-    h2.section-title {
-      font-size: 28px;
-      color: #ffffff;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    p {
-      font-size: 18px;
-      max-width: 700px;
-      text-align: center;
-      color: #ddd;
-      line-height: 1.6;
-      margin-top: 16px;
-    }
-
-    .countdown {
-      font-size: 26px;
-      font-weight: 600;
-      margin-top: 30px;
-      color: gold;
-      background: #1c1c1c;
-      padding: 12px 24px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-    }
-
-    .benefits, .tokenomics, .roadmap {
+    select.language-switcher {
       background: #111;
-      border-radius: 20px;
-      padding: 40px 30px;
-      margin-top: 50px;
-      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-      max-width: 800px;
-      width: 100%;
-    }
-
-    .benefits h2, .tokenomics h2, .roadmap h2 {
-      font-size: 28px;
-      color: #ffffff;
-      margin-bottom: 24px;
-      text-align: center;
-    }
-
-    ul, ol {
-      font-size: 18px;
-      line-height: 1.8;
-      color: #ddd;
-      padding-left: 20px;
-    }
-
-    .benefits li::before {
-      content: '\2022';
-      position: absolute;
-      left: 0;
       color: gold;
-    }
-
-    a {
-      color: gold;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    .cta {
-      margin-top: 40px;
-    }
-
-    .cta a {
-      display: inline-block;
-      background-color: gold;
-      color: #111;
-      padding: 12px 24px;
+      border: 1px solid gold;
+      padding: 6px 12px;
       border-radius: 8px;
       font-weight: bold;
-      transition: all 0.3s ease;
-      margin: 10px;
-    }
-
-    .cta a:hover {
-      background-color: #fff;
-    }
-
-    .whitepaper-btn {
-      display: inline-block;
-      background-color: gold;
-      color: #111;
-      padding: 12px 24px;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      margin: 10px;
-      border: 2px solid gold;
-    }
-
-    .whitepaper-btn:hover {
-      background-color: #fff;
-      color: #000;
-      text-decoration: none;
-    }
-
-    .verified-badge {
-      display: block;
-      color: gold;
-      font-weight: bold;
-      text-align: center;
-      margin-top: -5px;
-    }
-
-    footer {
-      margin-top: 60px;
-      font-size: 14px;
-      color: #777;
-      text-align: center;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 999;
     }
   </style>
 </head>
 <body>
-  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="LSC Logo" />
-  <h1>Luxem Swiss Coin (LSC)</h1>
-  <p>
-    Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.
-  </p>
+  <select class="language-switcher" onchange="switchLanguage(this.value)">
+    <option value="en">🇬🇧 English</option>
+    <option value="fr">🇫🇷 French</option>
+    <option value="pl">🇵🇱 Polish</option>
+    <option value="sh">🇿🇼 Shona</option>
+    <option value="yo">🇳🇬 Yoruba</option>
+    <option value="tr">🇹🇷 Turkish</option>
+    <option value="es">🇪🇸 Spanish</option>
+    <option value="hi">🇮🇳 Hindi</option>
+    <option value="zh">🇨🇳 Chinese</option>
+    <option value="ru">🇷🇺 Russian</option>
+  </select>
 
-  <div class="countdown" id="countdown">Loading countdown...</div>
-
-  <div class="benefits">
-    <h2>LSC Utility Benefits</h2>
-    <ul>
-      <li>Early access to limited sneaker & fashion drops</li>
-      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
-      <li>24-hour shipping upgrades for holders</li>
-      <li>VIP access to giveaways and airdrops</li>
-      <li>Global usage — fashion meets Web3</li>
-      <li>Use for future services and token rewards</li>
-      <li>Community access via <a href="https://discord.gg/hhW5vFB7" target="_blank">Discord</a></li>
-    </ul>
-  </div>
-
-  <div class="tokenomics">
-    <h2 class="section-title">Tokenomics</h2>
-    <ul>
-      <li><strong>Total Supply:</strong> 1,000,000 LSC</li>
-      <li><strong>Public Sale:</strong> 40%</li>
-      <li><strong>Team & Development:</strong> 20%</li>
-      <li><strong>Marketing & Partnerships:</strong> 20%</li>
-      <li><strong>Community Rewards / Airdrops:</strong> 10%</li>
-      <li><strong>Reserve / Liquidity:</strong> 10%</li>
-    </ul>
-  </div>
-
-  <div class="roadmap">
-    <h2 class="section-title">Roadmap</h2>
-    <ol>
-      <li><strong>Q3 2025:</strong> Token Launch + Discord Setup</li>
-      <li><strong>Q4 2025:</strong> Marketing, Airdrops, Premium Partnerships</li>
-      <li><strong>Q1 2026:</strong> App Launch + Global Drops</li>
-      <li><strong>Q2 2026:</strong> LSC Integrations with Luxem Swiss checkout</li>
-    </ol>
-  </div>
-
-  <div class="cta">
-    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank">Buy Premium Access</a>
-    <a href="https://polygonscan.com/token/0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9" target="_blank">View on PolygonScan</a>
-    <a href="#" onclick="addToMetamask()">+ Add LSC to MetaMask</a>
-    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download class="whitepaper-btn">📄 Download Whitepaper</a>
-    <span class="verified-badge">✅ Verified Project</span>
-  </div>
-
-  <footer>
-    &copy; 2025 Luxem Swiss Coin. All rights reserved.
-  </footer>
+  <!-- rest of body stays as-is -->
 
   <script>
-    const countdownEl = document.getElementById("countdown");
-    const launchDate = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).getTime();
+    const translations = {
+      fr: {
+        'Luxem Swiss Coin (LSC)': 'Pièce Luxem Swiss (LSC)',
+        'Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.': 'Pas un meme coin. Pas de rug pull. Une vraie utilité de luxe. Utilisez LSC pour débloquer des avantages dans l’univers Luxem Swiss.',
+        'Download Whitepaper': 'Télécharger le Whitepaper',
+        'Verified Project': 'Projet Vérifié',
+        'Connect Wallet': 'Connecter le Wallet'
+      },
+      // other languages... (use same format as above)
+    };
 
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = launchDate - now;
-
-      if (distance <= 0) {
-        countdownEl.textContent = "LSC is now live!";
-        clearInterval(timer);
-        return;
-      }
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-      countdownEl.textContent = `Launch in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-    }, 1000);
-
-    async function addToMetamask() {
-      try {
-        await window.ethereum.request({
-          method: 'wallet_watchAsset',
-          params: {
-            type: 'ERC20',
-            options: {
-              address: '0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9',
-              symbol: 'LSC',
-              decimals: 18,
-              image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410'
-            },
-          },
-        });
-      } catch (error) {
-        console.error('Error adding to MetaMask:', error);
-      }
+    function switchLanguage(lang) {
+      const map = translations[lang];
+      if (!map) return;
+      document.querySelectorAll('*').forEach(el => {
+        if (map[el.innerText]) {
+          el.innerText = map[el.innerText];
+        }
+      });
     }
   </script>
 </body>
