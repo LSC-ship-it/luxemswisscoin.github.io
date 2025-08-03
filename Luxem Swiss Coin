@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxem Swiss Coin (LSC)</title>
+  <meta name="description" content="Luxem Swiss Coin (LSC) – The official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
+  <meta property="og:title" content="Luxem Swiss Coin (LSC)" />
+  <meta property="og:description" content="Get early access, discounts, and VIP drops using LSC." />
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
+  <meta property="og:url" content="https://luxemswisscoin.github.io" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.8rem;
+      color: #d9a528;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      text-align: center;
+      line-height: 1.6;
+    }
+    .utility-box {
+      margin-top: 40px;
+      border: 1px solid #333;
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 700px;
+    }
+    .utility-box h2 {
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .utility-box ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+    .add-wallet {
+      margin-top: 30px;
+      font-size: 1rem;
+      background: #d9a528;
+      color: black;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      transition: background 0.3s;
+    }
+    .add-wallet:hover {
+      background: #ffc107;
+    }
+    footer {
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+    img.logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+    a {
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="Luxem Swiss Coin Logo" />
+
+  <h1>Luxem Swiss Coin (LSC)</h1>
+  <p>Not a meme coin. No rug pull. Just real fashion utility. Use LSC for perks inside the Luxem Swiss ecosystem — where luxury meets Web3.</p>
+
+  <div class="utility-box">
+    <h2>🛠 What Can You Do With LSC?</h2>
+    <ul>
+      <li>🔥 Early access to limited sneaker & fashion drops</li>
+      <li>💸 Discounts when shopping at <strong>luxemswiss.com</strong></li>
+      <li>🚀 24-hour shipping upgrades for verified holders</li>
+      <li>🎁 Entry into exclusive giveaways and airdrops</li>
+      <li>🗳 Community voting on future product drops</li>
+    </ul>
+  </div>
+
+  <button class="add-wallet" onclick="addToken()">+ Add LSC to MetaMask</button>
+
+  <footer>
+    <p>&copy; 2025 Luxem Swiss Coin — Powered by Luxem Swiss</p>
+    <p><a href="https://polygonscan.com/token/0xD48bF95b1d7B5035980C065A78c7D83aaF476367" target="_blank">View on PolygonScan</a></p>
+  </footer>
+
+  <script>
+    async function addToken() {
+      try {
+        const wasAdded = await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0xD48bF95b1d7B5035980C065A78c7D83aaF476367',
+              symbol: 'LSC',
+              decimals: 18,
+              image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410',
+            },
+          },
+        });
+
+        if (wasAdded) {
+          alert('✅ LSC was added to your MetaMask wallet!');
+        }
+      } catch (error) {
+        console.error(error);
+        alert('⚠️ Please make sure MetaMask is installed and unlocked.');
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
