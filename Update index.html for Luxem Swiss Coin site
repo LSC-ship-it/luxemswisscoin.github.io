@@ -113,7 +113,7 @@
     <h2>LSC Utility Benefits</h2>
     <ul>
       <li>Early access to limited sneaker & fashion drops</li>
-      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">luxemswiss.com</a></li>
+      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
       <li>24-hour shipping upgrades for holders</li>
       <li>VIP access to giveaways and airdrops</li>
       <li>Global usage — fashion meets Web3</li>
@@ -123,7 +123,7 @@
 
   <script>
     const countdownEl = document.getElementById("countdown");
-    const launchDate = new Date("2025-09-15T00:00:00").getTime();
+    const launchDate = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).getTime();
 
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -145,6 +145,3 @@
   </script>
 </body>
 </html>
-
-
-
