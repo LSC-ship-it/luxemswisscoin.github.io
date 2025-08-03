@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="language-switcher">
+  <div class="language-switch">
     <select onchange="switchLanguage(this.value)">
       <option value="en">🇬🇧 English</option>
       <option value="pl">🇵🇱 Polish</option>
@@ -15,14 +15,74 @@
     </select>
   </div>
 
-  <header>
-    <h1 data-i18n="hero_title">Luxem Swiss Coin (LSC)</h1>
-    <p data-i18n="hero_description">Not a meme coin. No rug pull. Pure luxury utility...</p>
-  </header>
+  <h1 data-i18n="hero_title">Luxem Swiss Coin (LSC)</h1>
+  <p data-i18n="hero_description">
+    Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.
+  </p>
 
   <button data-i18n="countdown">Loading countdown...</button>
 
-  <script src="script.js"></script>
+  <div class="button-group">
+    <button data-i18n="btn_premium">Buy Premium Access</button>
+    <button data-i18n="btn_polygon">View on PolygonScan</button>
+    <button data-i18n="btn_metamask">+ Add LSC to MetaMask</button>
+    <button data-i18n="btn_whitepaper">Download Whitepaper</button>
+    <button data-i18n="btn_connect_wallet">Connect Wallet</button>
+  </div>
+
+  <footer>
+    <p data-i18n="footer_text">&copy; 2025 Luxem Swiss Coin. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const translations = {
+      en: {
+        page_title: "Luxem Swiss Coin (LSC)",
+        hero_title: "Luxem Swiss Coin (LSC)",
+        hero_description: "Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.",
+        countdown: "Loading countdown...",
+        btn_premium: "Buy Premium Access",
+        btn_polygon: "View on PolygonScan",
+        btn_metamask: "+ Add LSC to MetaMask",
+        btn_whitepaper: "Download Whitepaper",
+        btn_connect_wallet: "Connect Wallet",
+        footer_text: "© 2025 Luxem Swiss Coin. All rights reserved."
+      },
+      pl: {
+        page_title: "Luxem Swiss Coin (LSC)",
+        hero_title: "Luxem Swiss Coin (LSC)",
+        hero_description: "Nie jest to meme coin. Bez oszustwa. Czysta luksusowa użyteczność. Użyj LSC, aby odblokować prawdziwe korzyści wewnątrz uniwersum Luxem Swiss — gdzie luksus spotyka Web3.",
+        countdown: "Ładowanie odliczania...",
+        btn_premium: "Kup dostęp Premium",
+        btn_polygon: "Zobacz na PolygonScan",
+        btn_metamask: "+ Dodaj LSC do MetaMask",
+        btn_whitepaper: "Pobierz Whitepaper",
+        btn_connect_wallet: "Połącz portfel",
+        footer_text: "© 2025 Luxem Swiss Coin. Wszelkie prawa zastrzeżone."
+      },
+      fr: {
+        page_title: "Luxem Swiss Coin (LSC)",
+        hero_title: "Luxem Swiss Coin (LSC)",
+        hero_description: "Ce n’est pas un meme coin. Aucun scam. Une vraie utilité de luxe. Utilisez LSC pour débloquer de vrais avantages dans l'univers Luxem Swiss — où la mode haut de gamme rencontre le Web3.",
+        countdown: "Chargement du compte à rebours...",
+        btn_premium: "Acheter Premium",
+        btn_polygon: "Voir sur PolygonScan",
+        btn_metamask: "+ Ajouter LSC à MetaMask",
+        btn_whitepaper: "Télécharger le Whitepaper",
+        btn_connect_wallet: "Connecter le portefeuille",
+        footer_text: "© 2025 Luxem Swiss Coin. Tous droits réservés."
+      }
+    };
+
+    function switchLanguage(lang) {
+      const elements = document.querySelectorAll('[data-i18n]');
+      elements.forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) {
+          el.textContent = translations[lang][key];
+        }
+      });
+    }
+  </script>
 </body>
 </html>
-
