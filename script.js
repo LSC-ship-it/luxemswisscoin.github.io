@@ -48,6 +48,20 @@ function connectWallet() {
 
 // LANGUAGE SWITCHER (stub for now)
 function switchLanguage(lang) {
-  alert(`🌐 Language switched to: ${lang} (coming soon)`);
+function switchLanguage(lang) {
+  fetch(`translations/${lang}.json`)
+    .then((res) => res.json())
+    .then((translations) => {
+      for (const key in translations) {
+        const element = document.querySelector(`[data-i18n="${key}"]`);
+        if (element) {
+          element.innerHTML = translations[key];
+        }
+      }
+    })
+    .catch((err) => {
+      console.error(`Could not load ${lang}.json:`, err);
+      alert("Language file not found.");
+    });
 }
 
