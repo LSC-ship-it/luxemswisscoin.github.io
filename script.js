@@ -1,67 +1,42 @@
-// COUNTDOWN TIMER
-const countdownEl = document.getElementById("countdown");
-const launchDate = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).getTime(); // 45 days from now
+const translations = {
+  en: {
+    page_title: "Luxem Swiss Coin (LSC)",
+    hero_title: "Luxem Swiss Coin (LSC)",
+    hero_description: "Not a meme coin. No rug pull. Pure luxury utility...",
+    countdown: "Loading countdown..."
+  },
+  pl: {
+    page_title: "Luxem Swiss Coin (LSC)",
+    hero_title: "Luxem Swiss Coin (LSC)",
+    hero_description: "Nie jest to meme coin. Bez oszustwa. Czysta luksusowa użyteczność...",
+    countdown: "Ładowanie odliczania..."
+  },
+  fr: {
+    page_title: "Luxem Swiss Coin (LSC)",
+    hero_title: "Luxem Swiss Coin (LSC)",
+    hero_description: "Ce n’est pas un meme coin. Aucun scam. Une vraie utilité de luxe...",
+    countdown: "Chargement du compte à rebours..."
+  }
+};
 
-const timer = setInterval(() => {
-  const now = new Date().getTime();
-  const distance = launchDate - now;
+function switchLanguage(lang) {
+  const elements = document.querySelectorAll("[data-i18n]");
+  elements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = translations[lang][key] || el.textContent;
+  });
 
-  if (distance <= 0) {
-    countdownEl.textContent = "LSC is now live!";
-    clearInterval(timer);
-    return;
+  // Update page <title>
+  if (translations[lang]["page_title"]) {
+    document.title = translations[lang]["page_title"];
   }
 
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  countdownEl.textContent = `Launch in ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}, 1000);
-
-
-// ADD TO METAMASK FUNCTION
-async function addToMetamask() {
-  try {
-    await window.ethereum.request({
-      method: 'wallet_watchAsset',
-      params: {
-        type: 'ERC20',
-        options: {
-          address: '0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9', // Your real contract address
-          symbol: 'LSC',
-          decimals: 18,
-          image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410'
-        }
-      }
-    });
-  } catch (error) {
-    console.error('MetaMask add failed:', error);
-  }
+  localStorage.setItem("lang", lang);
 }
 
-// CONNECT WALLET FUNCTION
-function connectWallet() {
-  alert("🔗 Wallet connect coming soon.");
-}
-
-// LANGUAGE SWITCHER (stub for now)
-function switchLanguage(lang) {
-function switchLanguage(lang) {
-  fetch(`translations/${lang}.json`)
-    .then((res) => res.json())
-    .then((translations) => {
-      for (const key in translations) {
-        const element = document.querySelector(`[data-i18n="${key}"]`);
-        if (element) {
-          element.innerHTML = translations[key];
-        }
-      }
-    })
-    .catch((err) => {
-      console.error(`Could not load ${lang}.json:`, err);
-      alert("Language file not found.");
-    });
-}
+// Auto-load saved language
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  switchLanguage(savedLang);
+});
 
