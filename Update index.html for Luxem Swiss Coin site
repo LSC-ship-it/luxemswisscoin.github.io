@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxem Swiss Coin (LSC)</title>
   <meta name="description" content="Luxem Swiss Coin (LSC) – The official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
-  <meta property="og:title" content="Luxem Swiss Coin (LSC)" />
-  <meta property="og:description" content="Get early access, discounts, and VIP drops using LSC." />
-  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
-  <meta property="og:url" content="https://luxemswisscoin.github.io/" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
@@ -21,13 +17,10 @@
       align-items: center;
       padding: 60px 20px;
     }
-
     img.logo {
       width: 120px;
-      height: auto;
       margin-bottom: 20px;
     }
-
     h1 {
       font-size: 42px;
       color: gold;
@@ -35,7 +28,6 @@
       margin: 0;
       text-align: center;
     }
-
     p {
       font-size: 18px;
       max-width: 700px;
@@ -44,7 +36,6 @@
       line-height: 1.6;
       margin-top: 16px;
     }
-
     .countdown {
       font-size: 26px;
       font-weight: 600;
@@ -55,7 +46,6 @@
       border-radius: 12px;
       box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
     }
-
     .benefits {
       background: #111;
       border-radius: 20px;
@@ -65,40 +55,34 @@
       max-width: 800px;
       width: 100%;
     }
-
     .benefits h2 {
       font-size: 28px;
       color: #ffffff;
       margin-bottom: 24px;
       text-align: center;
     }
-
     .benefits ul {
       list-style: none;
       padding: 0;
       font-size: 18px;
       line-height: 2;
     }
-
     .benefits li {
       margin-bottom: 12px;
       position: relative;
       padding-left: 16px;
     }
-
     .benefits li::before {
-      content: '\2022';
+      content: '•';
       position: absolute;
       left: 0;
       color: gold;
     }
-
     a {
       color: gold;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
-
     a:hover {
       text-decoration: underline;
     }
@@ -117,7 +101,7 @@
     <h2>LSC Utility Benefits</h2>
     <ul>
       <li>Early access to limited sneaker & fashion drops</li>
-      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
+      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">luxemswiss.com</a></li>
       <li>24-hour shipping upgrades for holders</li>
       <li>VIP access to giveaways and airdrops</li>
       <li>Global usage — fashion meets Web3</li>
