@@ -1,162 +1,56 @@
-/* Fonts & Base */
 body {
-  margin: 0;
-  padding: 60px 20px;
-  font-family: 'Poppins', sans-serif;
-  background-color: #0e0e0e;
-  color: #f9f9f9;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 40px;
 }
 
-/* Language Dropdown */
-.language-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid gold;
-  background-color: #111;
-  color: gold;
-  font-weight: bold;
-}
-
-/* Logo */
-.logo {
-  width: 120px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-/* Titles */
 h1 {
-  font-size: 42px;
   color: gold;
-  font-weight: 800;
-  margin: 0;
-  text-align: center;
+  font-size: 32px;
+  margin-bottom: 16px;
 }
 
-h2.section-title {
-  font-size: 28px;
-  color: #ffffff;
-  margin-top: 60px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Paragraphs */
 p {
-  font-size: 18px;
   max-width: 700px;
-  text-align: center;
-  color: #ddd;
-  line-height: 1.6;
-  margin-top: 16px;
-}
-
-/* Countdown Box */
-.countdown {
-  font-size: 26px;
-  font-weight: 600;
-  margin-top: 30px;
-  color: gold;
-  background: #1c1c1c;
-  padding: 12px 24px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-/* Sections */
-.benefits,
-.tokenomics,
-.roadmap {
-  background: #111;
-  border-radius: 20px;
-  padding: 40px 30px;
-  margin-top: 50px;
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
-  max-width: 800px;
-  width: 100%;
-}
-
-/* Lists */
-ul, ol {
+  margin: 0 auto 30px auto;
   font-size: 18px;
-  line-height: 1.8;
-  color: #ddd;
-  padding-left: 20px;
+  line-height: 1.5;
 }
 
-a {
+select {
+  margin-bottom: 20px;
+  padding: 8px 12px;
+  font-size: 16px;
+  background: #111;
   color: gold;
-  text-decoration: none;
-  font-weight: 600;
+  border: 1px solid gold;
+  border-radius: 5px;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-/* Buttons */
-.cta {
-  margin-top: 40px;
+.btns {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
   justify-content: center;
-  gap: 12px;
+  margin: 30px 0;
 }
 
-.cta a,
-.whitepaper-btn {
-  display: inline-block;
-  background-color: gold;
+button {
+  background: gold;
   color: #111;
-  padding: 12px 24px;
-  border-radius: 8px;
+  border: none;
+  padding: 12px 18px;
   font-weight: bold;
-  transition: all 0.3s ease;
-  border: 2px solid gold;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.cta a:hover,
-.whitepaper-btn:hover {
-  background-color: #fff;
-  color: #000;
-}
-
-/* Badge */
-.verified-badge {
-  display: block;
-  color: gold;
-  font-weight: bold;
-  text-align: center;
-  margin-top: -5px;
-}
-
-/* Footer */
 footer {
-  margin-top: 60px;
+  margin-top: 40px;
+  color: #aaa;
   font-size: 14px;
-  color: #777;
-  text-align: center;
 }
 
-/* Mobile */
-@media (max-width: 480px) {
-  h1 {
-    font-size: 32px;
-  }
-  .countdown {
-    font-size: 20px;
-    padding: 10px 18px;
-  }
-  .cta {
-    flex-direction: column;
-    align-items: center;
-  }
-}
 
