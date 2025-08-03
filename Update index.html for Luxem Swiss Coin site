@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luxem Swiss Coin (LSC)</title>
+  <meta name="description" content="Luxem Swiss Coin (LSC) — the official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
+  <meta property="og:title" content="Luxem Swiss Coin (LSC)" />
+  <meta property="og:description" content="Get early access, discounts, and VIP drops using LSC." />
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
+  <meta property="og:url" content="https://luxemswisscoin.github.io" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+      color: #d4af37;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    a.button {
+      background: #d4af37;
+      color: #0e0e0e;
+      padding: 12px 24px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s ease;
+    }
+
+    a.button:hover {
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #888;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+    }
+
+    img.logo {
+      max-width: 120px;
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="Luxem Swiss Coin Logo">
+  <h1>Luxem Swiss Coin</h1>
+  <p>The official coin of premium fashion — wear your investment.</p>
+  <a class="button" href="https://polygonscan.com/token/0xD40BF95b1d7B5035980C065A78c7D83aaF476367" target="_blank">View Token on PolygonScan</a>
+  <footer>
+    &copy; 2025 <a href="https://luxemswiss.com" target="_blank">Luxem Swiss</a>. All rights reserved.
+  </footer>
+</body>
+</html>
+
+
+
