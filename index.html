@@ -1,46 +1,114 @@
-<!-- START OF MULTI-LANGUAGE LSC SITE -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Luxem Swiss Coin (LSC)</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="description" content="Luxem Swiss Coin (LSC) – The official token of Luxem Swiss. Real fashion utility. Not a meme coin.">
+  <meta property="og:title" content="Luxem Swiss Coin (LSC)" />
+  <meta property="og:description" content="Get early access, discounts, and VIP drops using LSC." />
+  <meta property="og:image" content="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" />
+  <meta property="og:url" content="https://luxemswisscoin.github.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
+      margin: 0;
       font-family: 'Poppins', sans-serif;
       background: #0e0e0e;
       color: #f9f9f9;
-      margin: 0;
-      padding: 40px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding: 60px 20px;
     }
-    select.language-switcher {
-      background: #111;
-      color: gold;
-      border: 1px solid gold;
-      padding: 8px 12px;
-      border-radius: 8px;
-      font-weight: bold;
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      z-index: 1000;
+
+    img.logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 20px;
     }
+
     h1 {
+      font-size: 42px;
       color: gold;
-      font-size: 36px;
       font-weight: 800;
-      margin-top: 40px;
+      margin: 0;
       text-align: center;
     }
-    p, li {
-      font-size: 18px;
-      line-height: 1.6;
-      color: #ddd;
+
+    h2.section-title {
+      font-size: 28px;
+      color: #ffffff;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      text-align: center;
     }
+
+    p {
+      font-size: 18px;
+      max-width: 700px;
+      text-align: center;
+      color: #ddd;
+      line-height: 1.6;
+      margin-top: 16px;
+    }
+
+    .countdown {
+      font-size: 26px;
+      font-weight: 600;
+      margin-top: 30px;
+      color: gold;
+      background: #1c1c1c;
+      padding: 12px 24px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    }
+
+    .benefits, .tokenomics, .roadmap {
+      background: #111;
+      border-radius: 20px;
+      padding: 40px 30px;
+      margin-top: 50px;
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .benefits h2, .tokenomics h2, .roadmap h2 {
+      font-size: 28px;
+      color: #ffffff;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    ul, ol {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #ddd;
+      padding-left: 20px;
+    }
+
+    .benefits li::before {
+      content: '\2022';
+      position: absolute;
+      left: 0;
+      color: gold;
+    }
+
+    a {
+      color: gold;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .cta {
+      margin-top: 40px;
+    }
+
     .cta a {
       display: inline-block;
       background-color: gold;
@@ -48,111 +116,144 @@
       padding: 12px 24px;
       border-radius: 8px;
       font-weight: bold;
+      transition: all 0.3s ease;
       margin: 10px;
+    }
+
+    .cta a:hover {
+      background-color: #fff;
+    }
+
+    .whitepaper-btn {
+      display: inline-block;
+      background-color: gold;
+      color: #111;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 10px;
+      border: 2px solid gold;
+    }
+
+    .whitepaper-btn:hover {
+      background-color: #fff;
+      color: #000;
       text-decoration: none;
     }
+
     .verified-badge {
+      display: block;
       color: gold;
       font-weight: bold;
-      margin-top: 10px;
-      display: block;
+      text-align: center;
+      margin-top: -5px;
+    }
+
+    footer {
+      margin-top: 60px;
+      font-size: 14px;
+      color: #777;
+      text-align: center;
     }
   </style>
 </head>
 <body>
+  <img class="logo" src="https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410" alt="LSC Logo" />
+  <h1>Luxem Swiss Coin (LSC)</h1>
+  <p>
+    Not a meme coin. No rug pull. Pure luxury utility. Use LSC to unlock real benefits inside the Luxem Swiss universe — where premium fashion meets Web3.
+  </p>
 
-  <select class="language-switcher" onchange="setLanguage(this.value)">
-    <option value="en">🇬🇧 English</option>
-    <option value="fr">🇫🇷 Français</option>
-    <option value="pl">🇵🇱 Polski</option>
-    <option value="sh">🇿🇼 Shona</option>
-    <option value="yo">🇳🇬 Yoruba</option>
-    <option value="tr">🇹🇷 Türkçe</option>
-    <option value="es">🇪🇸 Español</option>
-    <option value="hi">🇮🇳 हिन्दी</option>
-    <option value="zh">🇨🇳 中文</option>
-    <option value="ru">🇷🇺 Русский</option>
-  </select>
+  <div class="countdown" id="countdown">Loading countdown...</div>
 
-  <h1 id="title">Luxem Swiss Coin (LSC)</h1>
-  <p id="intro">Unlock premium fashion, discounts, airdrops and more with LSC. Not a meme coin. Real utility.</p>
-
-  <div class="cta">
-    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download id="whitepaper-btn">📄 Download Whitepaper</a>
-    <span class="verified-badge">✅ Verified Project</span>
-    <a href="#" onclick="connectWallet()" id="connect-wallet">🔗 Connect Wallet</a>
+  <div class="benefits">
+    <h2>LSC Utility Benefits</h2>
+    <ul>
+      <li>Early access to limited sneaker & fashion drops</li>
+      <li>Exclusive discounts at <a href="https://www.luxemswiss.com" target="_blank">Luxem Swiss</a></li>
+      <li>24-hour shipping upgrades for holders</li>
+      <li>VIP access to giveaways and airdrops</li>
+      <li>Global usage — fashion meets Web3</li>
+      <li>Use for future services and token rewards</li>
+      <li>Community access via <a href="https://discord.gg/hhW5vFB7" target="_blank">Discord</a></li>
+    </ul>
   </div>
 
+  <div class="tokenomics">
+    <h2 class="section-title">Tokenomics</h2>
+    <ul>
+      <li><strong>Total Supply:</strong> 1,000,000 LSC</li>
+      <li><strong>Public Sale:</strong> 40%</li>
+      <li><strong>Team & Development:</strong> 20%</li>
+      <li><strong>Marketing & Partnerships:</strong> 20%</li>
+      <li><strong>Community Rewards / Airdrops:</strong> 10%</li>
+      <li><strong>Reserve / Liquidity:</strong> 10%</li>
+    </ul>
+  </div>
+
+  <div class="roadmap">
+    <h2 class="section-title">Roadmap</h2>
+    <ol>
+      <li><strong>Q3 2025:</strong> Token Launch + Discord Setup</li>
+      <li><strong>Q4 2025:</strong> Marketing, Airdrops, Premium Partnerships</li>
+      <li><strong>Q1 2026:</strong> App Launch + Global Drops</li>
+      <li><strong>Q2 2026:</strong> LSC Integrations with Luxem Swiss checkout</li>
+    </ol>
+  </div>
+
+  <div class="cta">
+    <a href="https://buy.stripe.com/bJe00i1Qmdaiem0b1IfIs0d" target="_blank">Buy Premium Access</a>
+    <a href="https://polygonscan.com/token/0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9" target="_blank">View on PolygonScan</a>
+    <a href="#" onclick="addToMetamask()">+ Add LSC to MetaMask</a>
+    <a href="https://lsc-ship-it.github.io/luxemswisscoin.github.io/Luxem_Swiss_Whitepaper.zip" download class="whitepaper-btn">📄 Download Whitepaper</a>
+    <span class="verified-badge">✅ Verified Project</span>
+  </div>
+
+  <footer>
+    &copy; 2025 Luxem Swiss Coin. All rights reserved.
+  </footer>
+
   <script>
-    const translations = {
-      fr: {
-        title: "Pièce Luxem Swiss (LSC)",
-        intro: "Débloquez la mode premium, des réductions, des airdrops et plus avec LSC. Pas une blague. De la vraie utilité.",
-        whitepaper: "📄 Télécharger le Whitepaper",
-        connect: "🔗 Connecter le Wallet"
-      },
-      pl: {
-        title: "Moneta Luxem Swiss (LSC)",
-        intro: "Uzyskaj dostęp do mody premium, zniżek, airdropów i więcej dzięki LSC. To nie meme coin.",
-        whitepaper: "📄 Pobierz Whitepaper",
-        connect: "🔗 Połącz portfel"
-      },
-      sh: {
-        title: "Luxem Swiss Mari (LSC)",
-        intro: "Wana upfeke hwepamusoro, kuderedzwa, neairdrop neLSC. Haisi zvekutamba.",
-        whitepaper: "📄 Dhanilodha Gwaro",
-        connect: "🔗 Batanidza Wallet"
-      },
-      yo: {
-        title: "Owó Luxem Swiss (LSC)",
-        intro: "Ṣíṣí àṣà aláyọ, ẹdinwo, ati airdrops pẹ̀lú LSC. Kò ṣe érin.",
-        whitepaper: "📄 Gba Whitepaper",
-        connect: "🔗 So àpamọ Wallet"
-      },
-      tr: {
-        title: "Luxem Swiss Coin (LSC)",
-        intro: "LSC ile moda, indirimler, airdrop'lar ve daha fazlasını açın. Şaka değil.",
-        whitepaper: "📄 Whitepaper'ı İndir",
-        connect: "🔗 Cüzdanı Bağla"
-      },
-      es: {
-        title: "Moneda Luxem Swiss (LSC)",
-        intro: "Desbloquea moda premium, descuentos y más con LSC. No es una broma.",
-        whitepaper: "📄 Descargar Whitepaper",
-        connect: "🔗 Conectar Wallet"
-      },
-      hi: {
-        title: "लक्सेम स्विस कॉइन (LSC)",
-        intro: "LSC के साथ प्रीमियम फैशन, छूट और अधिक खोलें। मजाक नहीं है।",
-        whitepaper: "📄 वाइटपेपर डाउनलोड करें",
-        connect: "🔗 वॉलेट कनेक्ट करें"
-      },
-      zh: {
-        title: "Luxem Swiss 币 (LSC)",
-        intro: "使用 LSC 解锁高级时尚、折扣和空投。这不是笑话。",
-        whitepaper: "📄 下载白皮书",
-        connect: "🔗 连接钱包"
-      },
-      ru: {
-        title: "Монета Luxem Swiss (LSC)",
-        intro: "Откройте премиальную моду, скидки и больше с LSC. Это не шутка.",
-        whitepaper: "📄 Скачать Whitepaper",
-        connect: "🔗 Подключить Кошелек"
-      },
-    };
+    const countdownEl = document.getElementById("countdown");
+    const launchDate = new Date(Date.now() + 45 * 24 * 60 * 60 * 1000).getTime();
 
-    function setLanguage(lang) {
-      document.getElementById('title').innerText = translations[lang]?.title || translations['en'].title;
-      document.getElementById('intro').innerText = translations[lang]?.intro || translations['en'].intro;
-      document.getElementById('whitepaper-btn').innerText = translations[lang]?.whitepaper || translations['en'].whitepaper;
-      document.getElementById('connect-wallet').innerText = translations[lang]?.connect || translations['en'].connect;
-    }
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
 
-    function connectWallet() {
-      alert('Wallet connect coming soon!');
+      if (distance <= 0) {
+        countdownEl.textContent = "LSC is now live!";
+        clearInterval(timer);
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdownEl.textContent = `Launch in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    }, 1000);
+
+    async function addToMetamask() {
+      try {
+        await window.ethereum.request({
+          method: 'wallet_watchAsset',
+          params: {
+            type: 'ERC20',
+            options: {
+              address: '0xa834fdd76CCe9a219218c56A7607dF5a7af9Eac9',
+              symbol: 'LSC',
+              decimals: 18,
+              image: 'https://cdn.shopify.com/s/files/1/0906/7544/6137/files/DarkPurpleAndGoldModernGoldLoanLogo_2.png?v=1754149410'
+            },
+          },
+        });
+      } catch (error) {
+        console.error('Error adding to MetaMask:', error);
+      }
     }
   </script>
 </body>
 </html>
-<!-- END OF MULTI-LANGUAGE LSC SITE -->
-
